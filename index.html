@@ -42,23 +42,23 @@
         image[20] = 'image21.JPG'
         image[21] = 'image22.JPG'
         var rand = 60 / image.length
-         function randomimage() {
-             currentdate = new Date()
+        function randomimage() {
+            currentdate = new Date()
             image_number = currentdate.getSeconds()
             image_number = Math.floor(image_number / rand)
-            //return (image[(Math.floor(Math.Random() * 14))]
             return (image[image_number])
         }
         let img = document.getElementById("img");
         img.src = `${imlocation}${randomimage()}`
-        //document.getElementById("div").appendChild(img);
-        if (window.innerWidth >= window.innerHeight)
+        let intViewportWidth = window.innerWidth;
+        let intViewportHeight = window.innerHeight;
+        if (intViewportWidth >= intViewportHeight)
         {
             img.style.height = "85%"
         }
         else
         {
-            img.style.width="85%"
+            img.style.width = "85%"
         }   
         
 //-->
