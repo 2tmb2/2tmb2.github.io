@@ -38,6 +38,9 @@
         image[16] = 'image17.JPG'
         image[17] = 'image18.JPG'
         image[18] = 'image19.JPG'
+        image[19] = 'image20.JPG'
+        image[20] = 'image21.JPG'
+        image[21] = 'image22.JPG'
         var rand = 60 / image.length
          function randomimage() {
              currentdate = new Date()
@@ -49,7 +52,15 @@
         let img = document.getElementById("img");
         img.src = `${imlocation}${randomimage()}`
         //document.getElementById("div").appendChild(img);
-        img.style.width="50%"
+        if (window.innerWidth >= window.innerHeight)
+        {
+            img.style.height = "85%"
+        }
+        else
+        {
+            img.style.width="85%"
+        }   
+        
 //-->
     </script>
 </body>
