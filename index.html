@@ -1,35 +1,39 @@
-<html>
+<!DOCTYPE html>
 <head>
     <title>Refresh for image!</title>
-    <div id ="div"></div>
+    <div id="div">
+        <img id="img">
+    </div>
+    
 </head>
 <body>
     <script type="text/javascript">
 <!--
- var imlocation = "images/";
- var currentdate = 0;
- var image_number = 0;
- function ImageArray (n) {
-   this.length = n;
-   for (var i =1; i <= n; i++) {
-     this[i] = ' '
-   }
- }
- image = new ImageArray(1)
- image[0] = 'image1.jpg'
- var rand = 60/image.length
- function randomimage() {
-    currentdate = new Date()
-    image_number = currentdate.getSeconds()
-    image_number = Math.floor(image_number/rand)
-    return(image[image_number])
- }
- let img = document.createElement("img");
- img.src = '" + imlocation + randomimage()+ "'
- document.getElementById("div").appendChild(img);
- //document.write("<img src='" + imlocation + randomimage()+ "'>");
- //document.getElementById("img").style.width="50%"
+        var imlocation = "images/";
+        var currentdate = 0;
+        var image_number = 0;
+        function ImageArray(n) {
+            this.length = n;
+            for (var i = 1; i <= n; i++) {
+                this[i] = ' '
+            }
+        }
+        image = new ImageArray(1)
+        image[0] = 'image1.jpg'
+        var rand = 60 / image.length
+        function randomimage() {
+            currentdate = new Date()
+            image_number = currentdate.getSeconds()
+            image_number = Math.floor(image_number / rand)
+            return (image[image_number])
+        }
+        let img = document.getElementById("img");
+        img.src = `${imlocation}${randomimage()}`
+        //document.getElementById("div").appendChild(img);
+        img.style.width="50%"
+     //document.write("<img src='" + imlocation + randomimage()+ "'>");
+     //document.getElementById("img").style.width="50%"
 //-->
-</script>
+    </script>
 </body>
-</html>
+</>
