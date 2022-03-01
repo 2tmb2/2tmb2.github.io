@@ -33,19 +33,12 @@
         image[11] = 'image12.JPG'
         image[12] = 'image13.JPG'
         image[13] = 'image14.JPG'
-        var rand = 60 / image.length
         function randomimage() {
-            currentdate = new Date()
-            image_number = currentdate.getSeconds()
-            image_number = Math.floor(image_number / rand)
-            return (image[image_number])
+            return Math.ceil(Math.random() * image.length);
         }
         let img = document.getElementById("img");
         img.src = `${imlocation}${randomimage()}`
-        //document.getElementById("div").appendChild(img);
-        img.style.width="50%"
-     //document.write("<img src='" + imlocation + randomimage()+ "'>");
-     //document.getElementById("img").style.width="50%"
+        img.style.height="85%"
 //-->
     </script>
 </body>
