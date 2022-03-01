@@ -62,7 +62,14 @@
         let img = document.getElementById("img");
 
         img.src = `${imlocation}${randomimage()}`
-        img.style.width = "85%"
+        if (window.innerWidth >= window.innerHeight)
+        {
+            img.style.height = "85%"
+        }
+        else
+        {
+            img.style.width = "85%"
+        }
         
         
 //-->
