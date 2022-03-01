@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Refresh for image!</title>
+    <div id ="div"></div>
 </head>
 <body>
     <script type="text/javascript">
@@ -23,7 +24,10 @@
     image_number = Math.floor(image_number/rand)
     return(image[image_number])
  }
- document.write("<img src='" + imlocation + randomimage()+ "'>");
+ let img = document.createElement("img");
+ img.src = '" + imlocation + randomimage()+ "'
+ document.getElementById("div").appendChild(img);
+ //document.write("<img src='" + imlocation + randomimage()+ "'>");
  //document.getElementById("img").style.width="50%"
 //-->
 </script>
