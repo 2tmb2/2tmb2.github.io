@@ -57,7 +57,8 @@
             currentdate = new Date()
             image_number = currentdate.getSeconds()
             image_number = Math.floor(image_number / rand)
-            return (image[image_number])
+            test = Math.floor(Math.random() * 22);
+            return (image[test])
         }        
         let img = document.getElementById("img");
         img.src = `${imlocation}${randomimage()}`
