@@ -47,22 +47,11 @@
             image_number = currentdate.getSeconds()
             image_number = Math.floor(image_number / rand)
             return (image[image_number])
-        }
+        }        
+        let img = document.getElementById("img");
+        img.src = `${imlocation}${randomimage()}`
+        img.style.height = (intViewportHeight * .85)
         
-        let intViewportWidth = window.innerWidth;
-        let intViewportHeight = window.innerHeight;
-        if (intViewportWidth >= intViewportHeight)
-        {
-            let img = document.getElementById("img");
-            img.src = `${imlocation}${randomimage()}`
-            img.style.height = (intViewportHeight * .85)
-        }
-        else
-        {
-            let img = document.getElementById("img");
-            img.src = `${imlocation}${randomimage()}`
-            img.style.width = (intViewportWidth * .85)
-        }   
         
 //-->
     </script>
