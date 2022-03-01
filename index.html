@@ -34,10 +34,10 @@
         image[12] = 'image13.JPG'
         image[13] = 'image14.JPG'
         function randomimage() {
-            return Math.ceil(Math.random() * image.length);
+            return Math.floor(Math.random() * image.length);
         }
         let img = document.getElementById("img");
-        img.src = `${imlocation}${randomimage()}`
+        img.src = `${imlocation}${image[randomimage()]}`
         img.style.height="85%"
 //-->
     </script>
