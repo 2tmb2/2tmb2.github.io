@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Refresh for image!</title>
+    <title>Refresh for new image!</title>
     <div id="div">
         <img id="img">
     </div>
@@ -19,9 +19,7 @@
 <body>
     <script type="text/javascript">
 <!--
-        var imlocation = "images/";
-        var currentdate = 0;
-        var image_number = 0;
+        var imagelocation = "images/";
         function ImageArray(n) {
             this.length = n;
             for (var i = 1; i <= n; i++) {
@@ -42,7 +40,7 @@
         image[10] = 'image11.JPG'
         image[11] = 'image12.JPG'
         image[12] = 'image13.JPG'
-        image[13] = 'image14.JPG'
+        image[13] = 'image14.PNG'
         image[14] = 'image15.JPG'
         image[15] = 'image16.JPG'
         image[16] = 'image17.JPG'
@@ -52,11 +50,10 @@
         image[20] = 'image21.JPG'
         image[21] = 'image22.JPG'
         function randomimage() {
-            test = Math.floor(Math.random() * 22);
-            return (image[test])
+            return (image[(Math.floor(Math.random() * 22))])
         }        
         let img = document.getElementById("img");
-        img.src = `${imlocation}${randomimage()}`
+        img.src = `${imagelocation}${randomimage()}`
         img.style.width = "50%"
 //-->
     </script>
