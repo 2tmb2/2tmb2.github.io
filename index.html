@@ -19,19 +19,24 @@
 <body>
     <script type="text/javascript">
 <!--
+        // sets the path location where all the images are stored
         var imagelocation = "images/";
         function ImageArray(n) {
             this.length = n;
+            // loops through n times and adds the image name to a list
             for (var i = 1; i <= n; i++) {
                 this[i] = ('image' + (i+1) + '.JPG')
             }
         }
         image = new ImageArray(21)
+        // picks a random number and goes to that index in the previously defined array
         function randomimage() {
             return (image[(Math.floor(Math.random() * 22))])
         }        
         let img = document.getElementById("img");
+        // displays the randomly chosen image
         img.src = `${imagelocation}${randomimage()}`
+        // sets the width of the image. probably want to check if the width or height is smaller and scale it to the smaller one. width is more generally compatible but its tiny on a phone and too big on a computer.
         img.style.width = "50%"
 //-->
     </script>
