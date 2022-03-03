@@ -25,10 +25,28 @@ img.src = `images/image${(Math.floor(Math.random()*26)+1)}.JPG`
 let limiter;
 if (window.screen.width > window.screen.height)
 {
-    img.classList = "wide"
+    if (img.height > img.width)
+    {
+        img.classList = "tall"
+    }
+    else if (img.width > img.height)
+    {
+        img.classList = "wide"
+    }
 }
-else {
+else if (window.screen.height > window.screen.width)
+{
+    if (img.height > img.width)|
+    {
+        img.classList = "tall"
+    }
+    else if (img.width > img.height)
+    {
+        img.classList = "wide"
+    }
+}
+else
+{
     img.classList = "tall"
 }
-
 </script>
