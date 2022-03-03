@@ -1,40 +1,23 @@
 <!DOCTYPE html>
 <head>
+    <link rel = "stylesheet" href = "index.css">
     <style>
-        .wide {
-            width:98vw
-        }
-        .tall {
-            height:98vh
-        }
         div {
             display:flex;
             justify-content: center;
-        }
+            background-position: center;
+            background-repeat:no-repeat;
+            background-size:contain;
+            width: 100vw;
+            height: 100vh;
+        }  
     </style>
 </head>
 <body>
-    <div>
-        <img id = "img">
+    <div id ="div">
     </div>
-    
 </body>
 <script type="text/javascript">
-
-const img = document.getElementById("img")
-img.src = `images/image${(Math.floor(Math.random()*26)+1)}.JPG`
-let limiter;
-if (img.height>img.width) {
-    limiter = img.height
-}
-else {
-    limiter = img.width
-}
-if (window.screen.width/limiter > window.screen.height/limiter) {
-    img.classList="wide"
-}
-else {
-    img.classList="tall"
-}
-
+const div = document.getElementById("div")
+div.style.backgroundImage = `url(images/image${(Math.floor(Math.random()*26)+1)}.JPG)`
 </script>
