@@ -20,33 +20,21 @@
     
 </body>
 <script type="text/javascript">
+
 const img = document.getElementById("img")
-img.src = `images/image${(Math.floor(Math.random()*26)+1)}.JPG`
+img.src = `images/image${(Math.floor(Math.random()*26)+1)}.jpg`
 let limiter;
-if (window.screen.width > window.screen.height)
-{
-    if (img.height > img.width)
-    {
-        img.classList = "tall"
-    }
-    else if (img.width > img.height)
-    {
-        img.classList = "wide"
-    }
+if (img.height>img.width) {
+    limiter = img.height
 }
-else if (window.screen.height > window.screen.width)
-{
-    if (img.height > img.width)|
-    {
-        img.classList = "tall"
-    }
-    else if (img.width > img.height)
-    {
-        img.classList = "wide"
-    }
+else {
+    limiter = img.width
 }
-else
-{
-    img.classList = "tall"
+if (window.screen.width/limiter > window.screen.height/limiter) {
+    img.classList="wide"
 }
+else {
+    img.classList="tall"
+}
+
 </script>
