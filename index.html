@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <head>
-    <link rel = "stylesheet" href = "index.css">
     <style>
         .wide {
             width:98vw
@@ -20,24 +19,16 @@
     </div>
     
 </body>
-
-
 <script type="text/javascript">
-
 const img = document.getElementById("img")
-img.src = `images/image${(Math.floor(Math.random()*26)+1)}.jpg`
+img.src = `images/image${(Math.floor(Math.random()*26)+1)}.JPG`
 let limiter;
-if (img.height>img.width) {
-    limiter = img.height
+if (window.screen.width > window.screen.height)
+{
+    img.classList = "wide"
 }
 else {
-    limiter = img.width
-}
-if (window.screen.width/limiter > window.screen.height/limiter) {
-    img.classList="wide"
-}
-else {
-    img.classList="tall"
+    img.classList = "tall"
 }
 
 </script>
