@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <link rel = "stylesheet" href = "index.css">
+    <style>
+        div {
+            display:flex;
+            justify-content: center;
+            background-position: center;
+            background-repeat:no-repeat;
+            background-size:contain;
+            width: 100vw;
+            height: 100vh;
+        }  
+    </style>
+</head>
+<body>
+    <div id ="div">
+    </div>
+</body>
+<script type="text/javascript">
+const div = document.getElementById("div")
+div.style.backgroundImage = `url(images/image${(Math.floor(Math.random()*26)+1)}.JPG)`
+</script>
