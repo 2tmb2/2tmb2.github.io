@@ -1,0 +1,650 @@
+/* CSS FOR ENTIRE SITE */
+
+* {
+  /* RESET MARGINS AND PADDING */
+  padding: 0;
+  margin: 0;
+
+  /* CHANGE FONT */
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  /* INCLUDE PADDING/BORDERS IN ELEMENTS TOTAL LENGTH/WIDTH */
+  box-sizing: border-box;
+}
+
+a {
+  /* REMOVES UNDERLINE FOR ALL LINKS */
+  text-decoration: none;
+
+  /* TEXT COLOR */
+  color: #0070f3;
+}
+
+a:hover,
+a:focus,
+a:active {
+  /* UNDERLINE WHEN HOVERING OVER LINK */
+  text-decoration: underline;
+}
+
+body {
+  /* CENTER ITEMS HORIZONTALLY  */
+  justify-content: center;
+}
+
+main {
+  /* SETS MINIMUM HEIGHT OF THE MAIN SECTION (NOT INCLUDING FOOTER) */
+  min-height: 70vh; /* 70% of viewport's height */
+  
+  /* ADJUSTS PADDING (FIRST VALUE IS TOP/BOTTOM, SECOND IS LEFT/RIGHT) */
+  padding: 0 4rem;
+
+  /* SET FLEXIBLE LENGTH ON FLEXIBLE ITEMS */
+  flex: 1;
+
+  /* DISPLAYS ELEMENTS IN BLOCK-LEVEL FLEX CONTIAINER */
+  display: flex;
+  
+  /* MAKE FLEX ITEMS STACK (VERTICAL) */
+  flex-direction: column;
+
+  /* CENTER ITEMS VERTICALLY  */
+  align-items: center;
+}
+
+/* NAVIGATION BAR */
+nav {
+  /* MAKES THE NAV BAR NOT ANIMATED */
+  animation: anti-animation ease-out 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.logo {
+  margin-left: 18px;
+  margin-top: 18px;
+  max-width: 45px;
+  max-height: 45px;
+  float: left;
+}
+
+nav ul {
+  /* REMOVES BULLET POINTS */
+  list-style-type: none;
+
+  /* CLIPS OVERFLOW CONTENT */
+  overflow: hidden;
+
+  /* ADDS PADDING TO NAV BAR */
+  padding: 18px 0;
+
+  /* CHANGES HORIZONTAL ALIGNMENT OF TEXT */
+  text-align: left;
+}
+
+nav li {
+  /* PUTS LIST ITEMS INLINE (NOT STACKED) */
+  display: inline;
+
+  /* ADDS MARGIN BETWEEN EACH LIST ITEM */
+  margin: 12px;
+
+  /* TEXT SIZE */
+  font-size: 20px;
+}
+
+nav li a {
+  /* TEXT COLOR */
+  color: rgba(0,0,0,.5);
+}
+
+nav li a:hover,a:focus,a:active {
+  /* REMOVES LINK UNDERLINE */
+  text-decoration: none;
+
+  /* TEXT COLOR ON HOVER */
+  color: #343a40;;
+}
+
+.hamburgerIcon {
+  display: none;
+}
+
+.openedPage {
+  /* TEXT COLOR OF PAGE OPENED */
+  color: black;
+}
+
+/* DROPDOWN BAR (CONTACT US) https://www.w3schools.com/Css/tryit.asp?filename=trycss_dropdown_navbar2 */
+li.dropdown {
+  /* PUTS DROPDOWN CONTENT INLINE WITH CONTACT US BUTTON */
+  display: inline-block;
+}
+
+.dropdownContent {
+  /* HIDES DROPDOWN CONTENT WHEN NOT HOVERING */
+  display: none;
+
+  /* PUTS DROPDOWN CONTENT BELOW CONTACT BUTTON */
+  position: absolute;
+
+  /* BACKGROUND COLOR OF THE DROPDOWN MENU */
+  background-color: #f9f9f9;
+}
+
+.dropdownContent a {
+  /* TEXT COLOR OF LINKS IN DROPDOWN MENU */
+  color: rgba(0,0,0,.5);
+
+  /* PADDING AROUND TEXT (TOP/BOTTOM AND LEFT/RIGHT) */
+  padding: 12px 16px;
+  
+  /* STACKS DROPDOWN MENU */
+  display: block;
+
+  /* ALIGNS LINK TEXT TO LEFT */
+  text-align: left;
+}
+
+.dropdownContent a:hover {
+  /* BACKGROUND COLOR OF DROPDOWN BOX */
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdownContent {
+  /* SHOWS DROPDOWN CONTENT WHEN HOVERING OVER CONTACT */
+  display: block;
+}
+
+/* HEADER TEXT */
+header {
+  /* CHANGES HEIGHT OF A LINE (SPACING) */
+  line-height: 1.15;
+
+  /* CHANGES FONT SIZE */
+  font-size: 2.3rem;
+  
+  /* CENTERS TEXT */
+  text-align: center;
+
+  /* ADDS SPACE BETWEEN TOP OF TEXT AND NAV BAR */
+  margin-top: 5%;
+}
+
+/* STYLE BINARY AND HEART COLORS */
+.binary {
+  color: #2F4A70;
+}
+.heart {
+  color: #ff0040;
+}
+
+/* STYLE SPECIAL TEXT */
+.code {
+  /* CHANGE BACKGROUND COLOR OF TEXT */
+  background: #fafafa;
+
+  /* TEXT COLOR */
+  color: #e83e8c;
+
+  /* CURVE CORNERS OF RECTANGLE */
+  border-radius: 5px;
+
+  /* CHANGE SPACE AROUND TEXT */
+  padding: 0.75rem;
+
+  /* CHANGE TEXT SIZE */
+  font-size: 1.1rem;
+
+  /* DIFFERENT MONOSPACE FONT */
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+  Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+/* FOOTER */
+footer {
+  /* HORIZONTAL LINE ABOVE FOOTER */
+  padding: 2rem 0; /* SPACE BETWEEN TEXT AND DIVIDER */
+  border-top: 1px solid #eaeaea;
+  margin: 0 3%; /* MAKE HORIZONTAL LINE SHORTER (DOESN'T TOUCH EACH SIDE) */
+
+  /* PUTS ITEMS NEXT TO EACHOTHER (INSTEAD OF STACKING) */
+  display: flex;
+
+  /* PUTS GAP BETWEEN TEXT AND BUTTONS (TWO DIVS) */
+  justify-content: space-between;
+
+  /* STACKS ITEMS IF NOT ENOUGH SPACE */
+  flex-wrap: wrap;
+
+  /* CHANGES HEIGHT OF A LINE (SPACING) */
+  line-height: 1.75;
+}
+
+footer h2 {
+  /* BIGGER TEXT FOR H2 */
+  font-size: 30px;
+}
+
+footer a {
+  /* CHANGES LINK COLOR TO BLACK */
+  color: black;
+}
+
+footer a:hover {
+  /* CHANGES LINK COLOR WHEN HOVERING */
+  color: #0070f3;
+}
+
+.footerText {
+  /* ADDS MARGIN TO THE LEFT SIDE OF THE TEXT */
+  margin-left: 5%;
+
+  /* CHANGES HORIZONTAL ALIGNMENT OF TEXT */
+  text-align: left;
+}
+
+/* SOCIAL MEDIA BUTTONS (https://www.w3schools.com/howto/howto_css_social_media_buttons.asp) */
+.footerButtons {
+  /* ADDS MARGIN TO THE RIGHT SIDE OF THE BUTTONS */
+  margin-right: 5%;
+}
+
+.fa {
+  /* ADJUSTS PADDING (SPACE BETWEEN SOCIAL MEDIA ICON AND EDGE OF SHAPE) */
+  padding: 20px;
+
+  /* SIZE OF SOCIAL MEDIA ICON */
+  font-size: 40px;
+
+  /* MAKES WIDTH SIZE (HORIZONTAL MEASUREMENT) CONSISTANT */
+  width: 55px;
+
+  /* ICON IN CENTER OF BUTTON */
+  text-align: center;
+
+  /* MAKES BUTTONS CIRCLES */
+  border-radius: 50%;
+
+  /* BUTTON COLOR */
+  color: white;
+  background-color: #ff0040;
+}
+
+.fa:hover,
+.fa:focus,
+.fa:active {
+  /* CHANGES HOW THE BUTTON LOOKS WHEN HOVERING OVER */
+  opacity: 0.7;
+
+  /* REMOVES LINK UNDERLINE AND COLOR */
+  text-decoration: none;
+  color: white;
+}
+
+/* -------------------- */
+
+/* STYLE GRID OF LINK CARDS (HOME PAGE, CONTACT PAGE, ETC.) */
+.grid {
+  /* DISPLAYS ELEMENTS IN BLOCK-LEVEL FLEX CONTIAINER */
+  display: flex;
+
+  /* CENTER ITEMS VERTICALLY AND HORIZONTALLY  */
+  align-items: center;
+  justify-content: center;
+
+  /* ALLOWS ITEMS TO STACK */
+  flex-wrap: wrap;
+
+  /* LIMITS MAXIMUM WIDTH OF THE GRID OF CARDS */
+  max-width: 800px;
+}
+
+.card {
+  /* ADJUSTS MARGIN (SPACE BETWEEN EACH CARD) */
+  margin: 1rem;
+
+  /* ADJUSTS PADDING (SPACE BETWEEN TEXT AND BORDER) */
+  padding: 1.5rem;
+
+  /* CHANGES HORIZONTAL ALIGNMENT OF TEXT */
+  text-align: left;
+
+  /* COLOR OF TEXT AND BORDER */
+  color: inherit;
+  border: 1px solid #eaeaea;
+
+  /* CURVED CORNERS */
+  border-radius: 10px;
+
+  /* FADE IN TRANSITION */
+  transition: color 0.15s ease, border-color 0.15s ease;
+
+  /* LIMITS MAXIMUM WIDTH OF THE CARDS */
+  max-width: 300px;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  /* CHANGES COLOR OF THE BOX AND TEXT WHEN HOVERING OVER/CLICKING ON CARD */
+  color: #0070f3;
+  border-color: #0070f3;
+
+  /* REMOVES UNDERLINE WHEN HOVERING OVER/CLICKING ON CARD */
+  text-decoration: none;
+}
+
+/* STYLES THE HEADER IN THE CARD */
+.card h2 {
+  /* BOTTOM MARGIN */
+  margin: 0 0 1rem 0;
+
+  /* CHANGES FONT SIZE */
+  font-size: 1.5rem;
+}
+
+/* STYLES THE TEXT IN THE CARD */
+.card p {
+  /* CHANGES FONT SIZE */
+  font-size: 1.25rem;
+
+  /* CHANGES HEIGHT OF A LINE (SPACING) */
+  line-height: 1.75;
+}
+
+/* -------------------- */
+
+/* HOME PAGE */
+/* STYLES HOME PAGE PARAGRAPH */
+.description {
+  /* CHANGES TOP AND BOTTOM MARGIN */
+  margin: 4rem 0;
+  
+  /* CHANGES HEIGHT OF A LINE (SPACING) */
+  line-height: 1.75;
+
+  /* CHANGES FONT SIZE */
+  font-size: 1.5rem;
+
+  /* ADDS PADDING AROUND BOTH SIDES OF THE TEXT */
+  padding-left: 5rem;
+  padding-right: 5rem;
+
+  /* CHANGES HORIZONTAL ALIGNMENT OF TEXT */
+  text-align: left;
+}
+
+/* -------------------- */
+/* STATIC CARDS */
+/* IMAGES */
+img {
+  /* CHANGES WIDTH TO 90% OF THE SCREEN/SPACE IT IS IN */
+  width: 90%
+}
+
+/* BLUE CARD */
+.blueCard {
+  /* MAKES WIDTH 90% OF SCREEN */
+  width: 90%;
+  
+  /* BLANK SPACE AROUND CARD */
+  margin: 5%;
+
+  /* DISTANCE BETWEEN TEXT AND BORDER */
+  padding: 1.5rem;
+
+  /* CHANGES HORIZONTAL ALIGNMENT OF TEXT */
+  text-align: left;
+
+  /* COLOR OF CARD */
+  border: 1px solid #193961;
+  background-color:#e7f2ff;
+
+  /* ROUNDING CORNERS */
+  border-radius: 10px;
+
+  /* FADE IN TRANSITION */
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.blueCard h1{
+  /* CENTERS HEADING TEXT */
+  text-align: center;
+
+  /* ADDS MARGIN BETWEEN BOTTOM OF HEADING AND TABLE */
+  margin-bottom: 2%;
+}
+
+.cardTable {
+  /* ADDS MARGIN BETWEEN TABLE AND SIDES OF CARD */
+  margin: 3%;
+
+  /* STACKS ROWS (EACH LINE WITH AN IMAGE AND TEXT) */
+  display: block;
+}
+
+.tableRow {
+  /* PUTS IMAGES NEXT TO TEXT */
+  display: flex;
+  
+  /* MARGIN BETWEEN ROWS */
+  margin: 3% 0;
+
+  /* CENTERS IMAGES AND TEXT VERTICALLY */
+  align-items: center;
+}
+
+.pressTableData {
+  /* LIMIT WIDTH OF IMAGES RELATIVE TO THE TABLE */
+  max-width: 40%;
+  min-width: 40%;
+  max-height: 40%;
+  min-height: 40%; /* the images are only the same size with max and min for width and height */
+}
+
+.aboutTableData {
+  /* LIMIT WIDTH OF IMAGES RELATIVE TO THE TABLE */
+  max-width: 25%;
+  min-width: 25%;
+  max-height: 25%;
+  min-height: 25%; /* the images are only the same size with max and min for width and height */
+}
+
+.tableText {
+  /* LINE HEIGHT OF TEXT IN TABLE */
+  line-height: 1.75;
+
+  /* SPACE AROUND TABLE DATA */
+  padding: 1% 0;
+} 
+
+.tableText p {
+  font-size: 1.5rem;
+}
+
+/* OTHER TEXT IN CARD (NOT IN TABLE) */
+.cardText {
+  margin: 1%;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.75;
+}
+
+/* RED CARD (EVERYTHING EXCEPT COLOR IS THE SAME AS THE BLUE CARDS) */
+.redCard {
+  /* MAKES WIDTH 90% OF SCREEN */
+  width: 90%;
+  
+  /* BLANK SPACE AROUND CARD */
+  margin: 5%;
+
+  /* DISTANCE BETWEEN TEXT AND BORDER */
+  padding: 1.5rem;
+
+  /* CHANGES HORIZONTAL ALIGNMENT OF TEXT */
+  text-align: left;
+
+  /* COLOR OF CARD */
+  border: 1px solid #f57192;
+  background-color:#fff0f3;
+
+  /* ROUNDING CORNERS */
+  border-radius: 10px;
+
+  /* FADE IN TRANSITION */
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.redCard h1{
+  /* CENTERS HEADING TEXT */
+  text-align: center;
+
+  /* ADDS MARGIN BETWEEN BOTTOM OF HEADING AND TABLE */
+  margin-bottom: 2%;
+}
+
+/* -------------------- */
+/* PRESS PAGE */
+.pressDate {
+  color: dimgrey;
+  font-size: 18px;
+}
+
+/* -------------------- */
+/* ANIMATIONS */
+body {
+  animation: fadeInAnimation ease-out 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes anti-animation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+/* -------------------- */
+/* MEDIA QUERIES */
+
+/* PHONES */
+@media screen and (max-width: 1000px) {
+  .tableRow {
+    /* STACKS IMAGE AND TEXT FOR SMALL SCREENS */
+    display: block;
+
+    /* CENTERS TEXT */
+    text-align: center;
+
+    margin-top: 5%;
+  }
+
+  .pressTableData, .aboutTableData {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    /* HEADER FONT SIZE SMALLER */
+    font-size: 1.8rem;
+  }
+
+  main {
+    /* LESS PADDING */
+    padding: 0 0.25rem;
+  }
+  
+  .description {
+    /* REMOVE PADDING */
+    padding-left: 0;
+    padding-right: 0;
+
+    /* CENTERS TEXT */
+    text-align: center;
+  }
+
+  footer {
+    /* STACKS TEXT AND BUTTONS */
+    display: block;
+
+    /* ALIGNS TEXT AND BUTTONS IN THE CENTER */
+    justify-content: center;
+  }
+  
+  .footerText {
+    /* REMOVE LEFT MARGIN */
+    margin: 0;
+
+    /* CENTER TEXT */
+    text-align: center;
+  }
+
+  .footerButtons {
+    /* REMOVE RIGHT MARGIN */
+    margin: 0;
+
+    /* CENTER TEXT */
+    text-align: center;
+
+    /* CREATES MARGIN BETWEEN TEXT AND BUTTONS */
+    margin-top: 1%;
+  }
+
+  .blueCard, .redCard {
+    /* REMOVE LEFT AND RIGHT PADDING AROUND CARD CONTENT */
+    padding-left: 0.10rem;
+    padding-right: 0.10rem;
+  }
+
+  /* MOBILE NAV BAR */
+  .hamburgerIcon {
+    display: inline;
+  }
+
+  nav ul {
+    text-align: right;
+  }
+
+  #navLinks {
+    display: none;
+    text-align: center;
+    transform: translate(-37.5px);
+  }
+
+  nav li {
+    display: block;
+  }
+
+  .dropdown {
+    margin: 0px;
+  }
+
+  .dropdown:hover .dropdownContent {
+    display: none;
+  }
+
+  nav .logo {
+    margin-left: 30px;
+    margin-top: 30px;
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+}

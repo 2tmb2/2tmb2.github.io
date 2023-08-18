@@ -1,23 +1,56 @@
 <!DOCTYPE html>
-<head>
-    <link rel = "stylesheet" href = "index.css">
-    <style>
-        div {
-            display:flex;
-            justify-content: center;
-            background-position: center;
-            background-repeat:no-repeat;
-            background-size:contain;
-            width: 100vw;
-            height: 100vh;
-        }  
-    </style>
-</head>
-<body>
-    <div id ="div">
-    </div>
-</body>
-<script type="text/javascript">
-const div = document.getElementById("div")
-div.style.backgroundImage = `url(images/image${(Math.floor(Math.random()*26)+1)}.JPG)`
-</script>
+<html>
+  <head>
+    
+    <title>BinaryHeart</title>
+    <meta name="description" content="Bridging the digital divide" />
+    <meta name="description" content="Author: Megan Lu" />
+    <link rel="shortcut icon" href="assets/binaryheart.svg"/>
+    <meta charset="utf-8" />
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	  <!-- link the webpage's stylesheet -->
+	  <link rel="stylesheet" href="bhstyle.css" />
+
+	  <!-- link the webpage's JavaScript file -->
+	  <script src="script.js" defer></script>
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Google tag (gtag.js) for Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52221233-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-52221233-3');
+    </script>
+    
+  </head>
+  
+  <body>
+    
+    <header>
+      <h1>Welcome to <span class="binary">Binary</span><span class="heart">Heart</span>!</h1>
+    </header>
+
+    <main>
+      <p class="description"></p>
+      <div class="grid">
+        <a class="card" href="newtrier/index.html"> <!-- this creates the individual card that is in the grid -->
+          <h2>New Trier Chapter &rarr;</h2> <!-- &rarr is an arrow -->
+          <p>Winnetka, Illinois</p>
+        </a>
+        
+        <a class="card" href="indiana/index.html">
+          <h2>Indiana Chapter &rarr;</h2>
+          <p>Bloomington, Indiana</p>
+        </a>
+      </div>
+    </main>
+
+  </body>
+</html>
